@@ -1,6 +1,6 @@
 require "test_helper"
 
-class MhartlPalindromeTest < Minitest::Test
+class MagnusPalindromeTest < Minitest::Test
 
   def test_non_palindrome
     refute "apple".palindrome?
@@ -18,7 +18,12 @@ class MhartlPalindromeTest < Minitest::Test
     assert "Madam, I'm Adam.".palindrome?
   end
 
-  def test_letters
-    assert_equal "MadamImAdam", "Madam, I'm Adam.".letters
+  def test_integer_not_palindrome
+    assert !12345.palindrome?
   end
+
+  def test_integer_palindrome
+    assert 12345654321.palindrome?
+  end
+
 end
