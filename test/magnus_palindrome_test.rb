@@ -26,4 +26,7 @@ class MagnusPalindromeTest < Minitest::Test
     assert 12345654321.palindrome?
   end
 
+  def test_empty_not_palindrome
+    refute " ".palindrome?
+  end
 end
